@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Web App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #181818;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #232323;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      padding: 32px;
+    }
+    h1, h2 {
+      color: #1db954;
+    }
+    .flex {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .section {
+      flex: 1 1 350px;
+      background: #282828;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    button, input[type="file"]::-webkit-file-upload-button {
+      background: #1db954;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-right: 8px;
+      transition: background 0.2s;
+    }
+    button:hover, input[type="file"]::-webkit-file-upload-button:hover {
+      background: #159c41;
+    }
+    input, select {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #222;
+      color: #fff;
+      margin-right: 8px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .playlist-songs {
+      margin-top: 12px;
+      background: #222;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .audio-player {
+      margin-top: 16px;
+      background: #181818;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .audio-player audio {
+      width: 100%;
+      outline: none;
+    }
+    .song-title {
+      font-weight: bold;
+      color: #fff;
+    }
+    .playlist-title {
+      font-weight: bold;
+      color: #1db954;
+    }
+    @media (max-width: 700px) {
+      .flex {
+        flex-direction: column;
+      }
+      .container {
+        padding: 12px;
+      }
+      .section {
+        padding: 12px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel" src="src/db.js"></script>
+  <script type="text/babel" src="src/components/AudioPlayer.js"></script>
+  <script type="text/babel" src="src/components/SongUpload.js"></script>
+  <script type="text/babel" src="src/components/SongList.js"></script>
+  <script type="text/babel" src="src/components/PlaylistManager.js"></script>
+  <script type="text/babel" src="src/App.js"></script>
+</body>
+</html> 
